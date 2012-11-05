@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <script src="/guitar-synth/lib/swfobject.js"></script>
+    <script src="/guitar-synth/build/guitar.js"></script>
+    <script>
+      window.onload = function(){
+        guitar = new gsynth.GuitarSynth({
+          flashPath: '/guitar-synth/build'
+        });
+
+        // a slowly picked E Major Chord:
+        setTimeout(function(){
+          guitar.playNotes([{ str: 5, fret: 0 }]);
+          setTimeout(function(){
+            guitar.playNotes([{ str: 4, fret: 2 }]);
+            setTimeout(function(){
+              guitar.playNotes([{ str: 3, fret: 2 }]);
+              setTimeout(function(){
+                guitar.playNotes([{ str: 2, fret: 1 }]);
+                setTimeout(function(){
+                  guitar.playNotes([{ str: 1, fret: 0 }]);
+                  setTimeout(function(){
+                    guitar.playNotes([{ str: 0, fret: 0 }]);
+                  },50);
+                },50);
+              },50);
+            },50);
+          },50);
+        },1000);
+      };
+    </script>
+  </body>
+</html>
