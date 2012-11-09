@@ -524,6 +524,10 @@ gsynth = {};
         this.playback = new g.GuitarSynthFlash(ops);
         this.playbackMethod = 'flash'; 
       }
+
+      if(!this.playback.isSupported()){
+        this.playback = null;
+      }
     }
 
   }
