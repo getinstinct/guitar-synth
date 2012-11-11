@@ -22,7 +22,7 @@
 
       onComplete: ExternalInterface.addCallback("playNotes", onPlayNotes);
       onComplete: ExternalInterface.addCallback("setTuning", onSetTuning);
-
+      onComplete: ExternalInterface.addCallback("setBufferSize", onSetBufferSize);
       // for testing in Flash IDE, comment out
       // ExternalInterfaces and call demo method:
       //demo();
@@ -48,6 +48,10 @@
 
     private function onSetTuning(tuning:Array):void{
       _instrument.setTuning(tuning);
+    }
+
+    private function onSetBufferSize(size:int):void{
+      _buf.setBufferSize(size);
     }
 
   }
