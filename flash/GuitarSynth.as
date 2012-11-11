@@ -2,6 +2,7 @@
 
   import flash.display.Sprite;
   import flash.external.ExternalInterface;
+  import flash.utils.*;
 
   import com.instinct.gsynth.*;
 
@@ -30,7 +31,16 @@
 
     private function demo():void{
       _buf.turnOn();
-      _instrument.playNotes([{str:5, fret:0}]);
+
+      setTimeout(function(){
+        trace("play1");
+        _instrument.playNotes([{str:5, fret:0}]);
+      }, 1000);
+
+      setTimeout(function(){
+        trace("play2");
+        _instrument.playNotes([{ str: 4, fret: 2 }]);
+      }, 2000);
     }
 
     private function onTurnOn():void{
