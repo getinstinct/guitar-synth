@@ -9,7 +9,7 @@
   public class SoundOutputBuffer {
     
     // 2048 is min supported by Flash:
-    private const MIN_BUFFER_SIZE:int = 2048;
+    private const MIN_BUFFER_SIZE:int = 2560;
 
     private var _sound:Sound;
     private var _channel:SoundChannel;
