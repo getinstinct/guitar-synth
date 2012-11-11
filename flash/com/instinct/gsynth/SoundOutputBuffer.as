@@ -17,7 +17,6 @@
     private var _instrument:Guitar;
     
     private var _current:Number = 0.0;
-    private var _isOn:Boolean = false;
     
     public function SoundOutputBuffer(){
       _sound = new Sound();
