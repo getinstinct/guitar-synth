@@ -57,19 +57,35 @@
   g.GuitarSynthFlash.prototype = {
 
     turnOn: function(){
-      this.swf && this.swf.turnOn();
+      try {
+        this.swf.turnOn();
+      } catch(e) {
+        // console.log("error turning on swf",e);
+      }
     },
 
     turnOff: function(){
-      this.swf && this.swf.turnOff();
+      try {
+        this.swf.turnOff();
+      } catch(e) {
+        // console.log("error turning off swf",e);
+      }
     },
 
     playNotes: function(notes){
-      this.swf && this.swf.playNotes(notes);
+      try {
+        this.swf.playNotes(notes);
+      } catch(e) {
+        // console.log("error playing notes",e);
+      }
     },
 
     setTuning: function(tuning){
-      this.swf && this.swf.setTuning(tuning);
+      try {
+        this.swf.setTuning(tuning);
+      } catch(e) {
+        // console.log("error setting tuning",e);
+      }
     },
 
     isSupported: function(){
