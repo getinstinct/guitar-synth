@@ -54,7 +54,7 @@
     },
 
     _createAudioNode: function(){
-      this.node = this.context.createJavaScriptNode(1024, 1, 1);
+      this.node = this.context.createScriptProcessor(1024, 1, 1);
 
       var self = this;
 
